@@ -1,6 +1,6 @@
 # Case Studies — Syed B. Hydari
 
-Source for the public case-study summaries at **https://syedhydari.github.io/case-studies/** — four STAR-format summaries of a single research throughline (regime-conditioned Bayesian–Kelly architecture) carried across a UCLA research fellowship, live systematic trading, institutional risk advisory (Risk Haas), pre-AUM quant R&D (Delta Strategy Co), and publication-stage research at Columbia.
+Source for the public case-study summaries at **https://syedhydari.github.io/case-studies/** — four STAR-format summaries of a single research throughline (regime-conditioned Bayesian–Kelly architecture) carried across a UCLA research fellowship, live systematic trading, boutique risk advisory (Risk Haas), pre-AUM quantitative R&D (Delta Strategy Co), and first-authored research at Columbia.
 
 ## Disclosure posture
 
