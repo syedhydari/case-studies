@@ -4,7 +4,7 @@ Source for the public case-study summaries at **https://syedhydari.github.io/cas
 
 ## Disclosure posture
 
-This repository intentionally contains **no code, models, data, or methodology** — a single static page. Every figure on the page appears verbatim on my resume or in Delta Strategy Co's public executive abstract; parameters, signals, and measurement protocols are withheld by design. Detailed case-study portfolios (full STAR narratives, measurement protocols, validation standards, technical drill-downs) are maintained privately and shared with interviewers on request.
+This repository intentionally contains **no code, models, data, or methodology** — a single static page. Every figure on the page appears verbatim on my resume or in Delta Strategy Co's public executive abstract; parameters, signals, and measurement protocols are withheld by design. Detailed case-study portfolios (full STAR narratives, measurement protocols, validation standards, technical drill-downs) are maintained privately / shared with interviewers on request.
 
 ## Rights
 
