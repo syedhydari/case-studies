@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Case Studies — Syed B. Hydari</title>
-<meta name="description" content="Public case-study summaries: regime-conditioned Bayesian–Kelly research carried across neural time series, live systematic trading, risk advisory, pre-AUM R&D, and publication-stage research. Methods withheld by design; full case studies on request.">
+<meta name="description" content="Public case-study summaries: regime-conditioned Bayesian–Kelly research carried across neural time series, live systematic trading, risk advisory, pre-AUM R&D, and a two-paper research program at Columbia on regime information and estimation risk. Methods withheld by design; full case studies on request.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://syedhydari.github.io/case-studies/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -12,9 +12,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://syedhydari.github.io/case-studies/og-card.png">
 <meta property="og:title" content="Case Studies — Syed B. Hydari">
-<meta property="og:description" content="One question, eight years, four chapters: regime-conditioned Bayesian–Kelly architecture from neural time series to a publication-stage mathematical answer. Methods withheld by design.">
+<meta property="og:description" content="One question, eight years, four chapters: regime-conditioned Bayesian–Kelly architecture from neural time series to two posted papers on regime information and estimation risk. Methods withheld by design.">
 <meta property="og:url" content="https://syedhydari.github.io/case-studies/">
-<meta name="twitter:card" content="summary">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="%23FAFBFC"/><rect x="4" y="13" width="6" height="6" fill="%232C5F8A" opacity=".22"/><rect x="11" y="13" width="6" height="6" fill="%232C5F8A" opacity=".42"/><rect x="18" y="13" width="6" height="6" fill="%232C5F8A" opacity=".65"/><rect x="25" y="13" width="3" height="6" fill="%231E4260"/></svg>'><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -82,6 +81,41 @@
 
   figure.viz{margin:30px 0 6px;padding:22px 22px 16px;background:#fff;border:1px solid var(--line);border-radius:6px}
 
+  /* ---------- papers (Columbia) ---------- */
+  .papers{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin:22px 0 4px}
+  @media (max-width:720px){.papers{grid-template-columns:1fr}}
+  a.paper{display:block;background:#fff;border:1px solid var(--line);border-left:3px solid var(--steel);border-radius:4px;padding:14px 16px;color:var(--ink)}
+  a.paper:hover{border-color:var(--steel)}
+  .paper .pk{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
+  .paper .pt{display:block;font-family:var(--serif);font-weight:500;font-size:17px;line-height:1.3;margin:6px 0 8px}
+  .paper .pm{display:block;font-family:var(--mono);font-size:12px;color:var(--slate)}
+
+  /* ---------- boundary panels (disclosure / claims) ---------- */
+  .boundary{display:grid;grid-template-columns:1fr 2px 1fr;gap:0 30px;margin:28px 0 0;padding:24px 26px;background:#fff;border:1px solid var(--line);border-radius:6px}
+  .boundary h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel);margin:0 0 4px;font-weight:500}
+  .boundary .held h4{color:var(--bronze)}
+  .boundary .sub{font-size:13.5px;color:var(--slate);margin:0 0 14px}
+  .boundary ul{list-style:none;margin:0;padding:0}
+  .boundary li{position:relative;padding-left:18px;font-size:14.5px;line-height:1.55;margin:0 0 9px}
+  .boundary li:last-child{margin-bottom:0}
+  .boundary .open li::before{content:"+";position:absolute;left:0;top:0;color:var(--steel);font-family:var(--mono)}
+  .boundary .held li{font-family:var(--mono);font-size:13px;color:var(--bronze)}
+  .boundary .held li::before{content:"×";position:absolute;left:0;top:0}
+  .boundary .rule{background:repeating-linear-gradient(to bottom,var(--bronze) 0 5px,transparent 5px 11px)}
+  .boundary-cap{font-size:14.5px;color:var(--slate);margin:12px 0 0;max-width:46em}
+  .ptag{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:500;color:var(--steel);border:1px solid var(--line);border-radius:3px;padding:0 5px;margin-right:8px;line-height:1.6;vertical-align:1px}
+  @media (max-width:640px){
+    .boundary{grid-template-columns:1fr;gap:20px 0;padding:20px 18px}
+    .boundary .rule{height:2px;background:repeating-linear-gradient(to right,var(--bronze) 0 5px,transparent 5px 11px)}
+  }
+  @media (max-width:560px){.chip{white-space:normal}}
+  /* dense diagrams keep a legible size on phones and scroll inside their frame */
+  @media (max-width:640px){
+    figure.viz{padding:16px 14px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    figure.viz svg{min-width:760px}
+    figure.viz figcaption{position:sticky;left:0;max-width:calc(100vw - 80px)}
+  }
+
   /* Columbia claims panel reuses the .boundary system; only the markers differ,
      because this contrast is epistemic (claimed / not claimed) rather than disclosure. */
   .boundary.claims .held h4{color:var(--oxide)}
@@ -124,7 +158,7 @@
   <div class="wrap">
     <div class="eyebrow">Syed B. Hydari · Case studies</div>
     <h1>One question, eight years, four chapters.</h1>
-    <p class="thesis">How much exposure should a portfolio take, given the state of the world — and how do you know the answer isn't fooling you? I carried that single question from <b>neural time series</b> to <b>live systematic trading</b>, <b>boutique risk advisory</b>, <b>pre-AUM quantitative R&amp;D</b>, and a <b>first-authored mathematical answer</b> at Columbia.</p>
+    <p class="thesis">How much exposure should a portfolio take, given the state of the world — and how do you know the answer isn't fooling you? I carried that single question from <b>neural time series</b> to <b>live systematic trading</b>, <b>boutique risk advisory</b>, <b>pre-AUM quantitative R&amp;D</b>, and a <b>two-paper research program</b> at Columbia.</p>
     <p class="disclose">Public summaries. Methodology, parameters, and measurement protocols are withheld by design — full case studies available to interviewers on request.</p>
   </div>
 </header>
@@ -177,113 +211,178 @@
   <div class="wrap">
     <div class="case-head">
       <span class="chapter"><span class="swatch" style="--o:.72"></span>The scholar · 2025 – present</span>
-      <span class="role-line">Researcher, Quant Finance · Columbia University — Mathematical Finance &amp; Statistics · independent publication-stage research</span>
+      <span class="role-line">Researcher, Quant Finance · Columbia University — Statistics &amp; MAFN · two-paper research program on regime information and estimation risk</span>
     </div>
-    <h2>Where should a regime signal enter a Kelly pipeline? A publication-stage answer.</h2>
+    <h2>Should a regime signal choose the estimation data, or size the bet? A two-paper answer.</h2>
+
+    <div class="papers" role="list" aria-label="Working papers">
+      <a class="paper" role="listitem" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7140658">
+        <span class="pk">Paper 1 · first author, with M. Kishmar</span>
+        <span class="pt">Regime information in Kelly allocation under estimation risk: exposure sizing versus sample selection</span>
+        <span class="pm">SSRN 7140658 · under review, <i>Quantitative Finance</i></span>
+      </a>
+      <a class="paper" role="listitem" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7538119">
+        <span class="pk">Paper 2 · sole author</span>
+        <span class="pt">Sample gating: estimator discontinuity under latent-state conditioning</span>
+        <span class="pm">SSRN 7538119 · under review, <i>The Journal of Risk</i></span>
+      </a>
+    </div>
 
     <div class="star">
       <div>
         <h3>Situation</h3>
-        <p>Kelly allocation is growth-optimal with known parameters and fragile with estimated ones. Regime conditioning is a standard remedy — but the literature leaves its central design choice open: should the regime signal select the <em>estimation data</em>, or scale the <em>exposure</em>?</p>
+        <p>Kelly allocation is growth-optimal with known parameters and fragile with estimated ones. Regime conditioning is a standard remedy, but the literature leaves its central design choice open: should the regime signal select the <em>estimation data</em>, or scale the <em>exposure</em>? And when it selects the data, a small change in classifier output can replace the entire estimation subsample, so the estimate jumps whenever the inferred state flips.</p>
       </div>
       <div>
         <h3>Task</h3>
-        <p>Answer that question at publication grade: rules fixed before evaluation, every decision out-of-sample, every figure net of transaction costs, and claims parked at exactly the altitude the evidence supports.</p>
+        <p>Answer both questions at publication grade: matched comparisons, a lagged signal, every portfolio figure net of transaction costs, and claims parked at exactly the altitude the evidence supports. I originated and led the program — first author of Paper 1, sole author of Paper 2 — leading theory, design, data, code, and writing, with version audit histories and decision logs kept throughout.</p>
       </div>
       <div>
         <h3>Action</h3>
-        <p>First-authored a study built as a controlled contrast — the same online Bayesian changepoint (BOCPD) regime signal used two ways, everything else identical — evaluated under one shared protocol across three universes: a point-in-time, survivorship-controlled S&amp;P 500 large-cap panel (2000–26), a dimensionally matched EuroStoxx 50 mirror (2000–2018), and nine US-sector ETFs (1999–2025), with a frozen, one-shot COVID/2022 holdout committed in advance. Proved a long-only shrinkage identity extending Rising–Wyner (2012) to the long-only case — exact under an explicitly bounded condition and conservative outside it; posterior machinery MCMC-verified against multi-chain convergence diagnostics.</p>
+        <p><b>Paper 1</b> is a controlled contrast: the same lagged Bayesian changepoint (BOCPD) signal used two ways. RegimeFilter selects same-state observations; RegimeDial keeps the full-window moments and scales exposure. Windows, constraints, and chronology are matched, across two point-in-time equity universes (S&amp;P 500 large-cap, EuroStoxx 50) and a nine-sector US ETF panel. On the theory side, I extended Rising–Wyner (2012) to long-only Kelly: dialing is exactly equivalent to mean shrinkage on interior windows, and takes no more risky exposure when the budget binds.</p>
+        <p><b>Paper 2</b> names the mechanism — sample gating — and splits every estimator update into <em>arrival</em> (new data, state input fixed) and <em>gating</em> (data fixed, state input changed). With data and components fixed, a hard selector jumps by a between-state distance; I proved that posterior averaging of the selector's own components is Lipschitz in the state probabilities and squared-risk optimal under its posterior model. Tested across six estimator classes and against classifier-free benchmarks (exponential weighting, Ledoit–Wolf), with a Holm adjustment on the full-window forecast tests and a tempered posterior that maps the stability–accuracy frontier.</p>
       </div>
       <div>
         <h3>Result</h3>
-        <p>The answer is consistent everywhere: sizing-side use is robust; data-side use is fragile — the data-side variant drew down deeper than the sizing rule in all three universes (−52% to −71%), reverted to an unconditional estimator on a substantial share of decision dates, and saw its contemporaneous-label Sharpe edge roughly halve under a one-week label lag. On the primary panel the pre-specified sizing rule led the six-strategy lineup on the two downside-sensitive ratios — Calmar 0.25 and Sortino 0.80 — at the second-best net Sharpe (0.56), with CAGR 13.1% and 20.6× terminal wealth against 4.5× for minimum-variance.</p>
-        <p>Stated with the paper's own restraint: no Sharpe-dominance claim — 1/N takes the Sharpe on the primary panel — and no shallowest-drawdown claim. In the frozen crisis holdout the rule leads neither Sharpe nor Calmar. Reported as-is.</p>
+        <p><b>Placement:</b> sizing beat selection on Sharpe, Calmar, and maximum drawdown in all three panels, and the Sharpe and Calmar advantages survived ex-post volatility matching. <b>Mechanism:</b> at hard-selector transitions, median mean and covariance displacements ran ~7× and 15–27× same-date full-window changes, with moving-block bootstrap intervals above one. <b>Repair:</b> posterior averaging cut median transition displacement 72–81% across six estimator classes (pooling at the selected state: 4–37%), cut minimum-variance turnover 23–30%, and brought 20% covariance reviews from 5.6–6.4 to 2.3–3.7 a year; risk-forecast loss fell against the full window in 9 of 9 comparisons.</p>
+        <p>Stated with the papers' own restraint: drawdown-gap intervals exclude zero in two panels and Calmar-gap intervals in none, and single-panel Sharpe tests are underpowered. Against de-levered full-window controls, the incremental drawdown benefit of state timing is unresolved. Classifier-free exponential weighting forecasts risk better than either average. Reported as-is.</p>
       </div>
     </div>
 
     <figure class="viz">
-      <svg viewBox="0 0 900 250" role="img" aria-label="One regime signal used two ways: scaling exposure is robust; filtering the estimation data is fragile.">
-        <text x="20" y="26" class="svg-title">One signal, two entry points</text>
+      <svg viewBox="0 0 900 250" role="img" aria-label="Paper 1: one lagged regime signal used two ways. Scaling the exposure keeps full-window moments and beats selection on Sharpe, Calmar and maximum drawdown in three of three panels. Selecting the estimation sample makes the estimates jump at state transitions: about 7 times for the mean and 15 to 27 times for the covariance, relative to the full window.">
+        <text x="20" y="26" class="svg-title">Paper 1 · one signal, two entry points</text>
 
-        <rect x="20" y="105" width="250" height="60" rx="5" fill="#E9EFF5" stroke="#2C5F8A" stroke-width="1.4"/>
-        <text x="40" y="131" class="svg-label-ink">Online regime signal</text>
-        <text x="40" y="150" class="svg-label">Bayesian changepoint</text>
+        <rect x="20" y="105" width="230" height="60" rx="5" fill="#E9EFF5" stroke="#2C5F8A" stroke-width="1.4"/>
+        <text x="38" y="131" class="svg-label-ink">Lagged regime signal</text>
+        <text x="38" y="150" class="svg-label">Bayesian changepoint</text>
 
-        <path d="M270 122 C 350 100, 400 78, 452 78" fill="none" stroke="#2C5F8A" stroke-width="2.4"/>
-        <path d="M452 78 l -12 -6 v12 z" fill="#2C5F8A"/>
-        <rect x="458" y="50" width="298" height="58" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.8"/>
-        <text x="476" y="74" class="svg-label-ink">Scales the exposure</text>
-        <text x="476" y="94" class="svg-label-steel">robust — Calmar lead, 3 / 3</text>
-        <text x="770" y="76" class="svg-label">degrades far</text>
-        <text x="770" y="93" class="svg-label">less under lag</text>
+        <path d="M250 122 C 330 100, 380 78, 424 78" fill="none" stroke="#2C5F8A" stroke-width="2.4"/>
+        <path d="M424 78 l -12 -6 v12 z" fill="#2C5F8A"/>
+        <rect x="430" y="50" width="276" height="58" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.8"/>
+        <text x="446" y="74" class="svg-label-ink">Scales the exposure · RegimeDial</text>
+        <text x="446" y="94" class="svg-label-steel">full-window moments, dialed size</text>
+        <text x="722" y="70" class="svg-label">beats selection on</text>
+        <text x="722" y="86" class="svg-label">Sharpe, Calmar, max DD</text>
+        <text x="722" y="102" class="svg-label-steel">3 / 3 panels</text>
 
-        <path d="M270 148 C 350 172, 400 194, 452 194" fill="none" stroke="#9E3B34" stroke-width="2" stroke-dasharray="7 6"/>
-        <path d="M452 194 l -12 -6 v12 z" fill="#9E3B34"/>
-        <rect x="458" y="166" width="298" height="58" rx="5" fill="#fff" stroke="#9E3B34" stroke-width="1.4" stroke-dasharray="6 5"/>
-        <text x="476" y="190" class="svg-label-ink">Filters the estimation data</text>
-        <text x="476" y="210" class="svg-label-oxide">fragile — deeper drawdown, 3 / 3</text>
-        <text x="770" y="192" class="svg-label">edge halves</text>
-        <text x="770" y="209" class="svg-label">under lag</text>
+        <path d="M250 148 C 330 172, 380 194, 424 194" fill="none" stroke="#9E3B34" stroke-width="2" stroke-dasharray="7 6"/>
+        <path d="M424 194 l -12 -6 v12 z" fill="#9E3B34"/>
+        <rect x="430" y="166" width="276" height="58" rx="5" fill="#fff" stroke="#9E3B34" stroke-width="1.4" stroke-dasharray="6 5"/>
+        <text x="446" y="190" class="svg-label-ink">Selects the sample · RegimeFilter</text>
+        <text x="446" y="210" class="svg-label-oxide">estimates jump when state flips</text>
+        <text x="722" y="186" class="svg-label">at transitions,</text>
+        <text x="722" y="202" class="svg-label">vs full window:</text>
+        <text x="722" y="218" class="svg-label-oxide">mean ~7× · cov 15–27×</text>
       </svg>
-      <figcaption>The study's central contrast, at concept level. Figures shown are those published on my resume; pipeline specifics live in the manuscript.</figcaption>
+      <figcaption>Paper 1's matched contrast at concept level: same signal, windows, constraints, and chronology, net of costs; only the entry point differs. Pipeline specifics live in the manuscript.</figcaption>
     </figure>
 
     <figure class="viz">
-      <svg viewBox="0 0 900 190" role="img" aria-label="Three evaluation universes under one shared protocol.">
-        <text x="20" y="26" class="svg-title">Three universes, one verbatim protocol</text>
-        <rect x="20" y="44" width="276" height="98" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.4"/>
-        <text x="38" y="70" class="svg-label-ink">US large-caps · 2000–26</text>
-        <text x="38" y="90" class="svg-label-sm">point-in-time · survivorship-controlled</text>
-        <text x="38" y="114" class="svg-label-steel-sm">Calmar + Sortino lead,</text>
-        <text x="38" y="131" class="svg-label-steel-sm">at second-best Sharpe</text>
-        <rect x="312" y="44" width="276" height="98" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.4"/>
-        <text x="330" y="70" class="svg-label-ink">EuroStoxx 50 mirror · 2000–18</text>
-        <text x="330" y="90" class="svg-label-sm">dimensionally matched by design</text>
-        <text x="330" y="114" class="svg-label-steel-sm">sizing-side beats</text>
-        <text x="330" y="131" class="svg-label-steel-sm">data-side on every metric</text>
-        <rect x="604" y="44" width="276" height="98" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.4"/>
-        <text x="622" y="70" class="svg-label-ink">US sector ETFs · 1999–2025</text>
-        <text x="622" y="90" class="svg-label-sm">a genuinely different, low-dim test</text>
-        <text x="622" y="114" class="svg-label-steel-sm">sizing-side beats</text>
-        <text x="622" y="131" class="svg-label-steel-sm">data-side on every metric</text>
-        <text x="20" y="172" class="svg-label">Only the data loader changes across universes — so any difference in results is attributable to the universe, not the method.</text>
+      <svg viewBox="0 0 900 292" role="img" aria-label="Paper 2, concept sketch with two states: as the posterior probability of the second state rises, a hard selector's estimate jumps at the switch point by the distance between the two state estimates, while the posterior average moves in proportion to the probability. Posterior averaging cut median transition displacement 72 to 81 percent, versus 4 to 37 percent for pooling at the selected state, and cut 20 percent covariance reviews from 5.6 to 6.4 a year to 2.3 to 3.7.">
+        <text x="20" y="26" class="svg-title">Paper 2 · same components, two ways to combine them</text>
+
+        <!-- concept plot -->
+        <text x="64" y="54" class="svg-label-sm">estimate</text>
+        <line x1="60" y1="62" x2="60" y2="200" stroke="#D5DEE7" stroke-width="1.2"/>
+        <line x1="60" y1="200" x2="384" y2="200" stroke="#D5DEE7" stroke-width="1.2"/>
+        <line x1="60" y1="85" x2="384" y2="85" stroke="#D5DEE7" stroke-dasharray="2 4"/>
+        <line x1="60" y1="175" x2="384" y2="175" stroke="#D5DEE7" stroke-dasharray="2 4"/>
+        <path d="M60 175 L 380 85" fill="none" stroke="#2C5F8A" stroke-width="2.4"/>
+        <path d="M60 175 H 220" fill="none" stroke="#9E3B34" stroke-width="2.4"/>
+        <path d="M220 175 V 85" fill="none" stroke="#9E3B34" stroke-width="1.6" stroke-dasharray="5 4"/>
+        <path d="M220 85 H 380" fill="none" stroke="#9E3B34" stroke-width="2.4"/>
+        <circle cx="220" cy="175" r="3.5" fill="#fff" stroke="#9E3B34" stroke-width="1.6"/>
+        <circle cx="220" cy="85" r="3.5" fill="#9E3B34"/>
+        <text x="228" y="140" class="svg-label-oxide">jump</text>
+        <text x="60" y="216" text-anchor="middle" class="svg-label-sm">0</text>
+        <text x="220" y="216" text-anchor="middle" class="svg-label-sm">½</text>
+        <text x="380" y="216" text-anchor="middle" class="svg-label-sm">1</text>
+        <text x="220" y="234" text-anchor="middle" class="svg-label-sm">posterior probability of the second state</text>
+        <line x1="60" y1="258" x2="84" y2="258" stroke="#9E3B34" stroke-width="2.4"/>
+        <text x="92" y="262" class="svg-label-sm">hard selection — jumps by a between-state distance</text>
+        <line x1="60" y1="278" x2="84" y2="278" stroke="#2C5F8A" stroke-width="2.4"/>
+        <text x="92" y="282" class="svg-label-sm">posterior average — Lipschitz in the probabilities</text>
+
+        <!-- decomposition -->
+        <rect x="452" y="44" width="428" height="50" rx="5" fill="#E9EFF5" stroke="#2C5F8A" stroke-width="1.2"/>
+        <text x="468" y="66" class="svg-label-ink">Arrival</text>
+        <text x="468" y="84" class="svg-label">new data, state input held fixed</text>
+        <rect x="452" y="104" width="428" height="68" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.6"/>
+        <text x="468" y="126" class="svg-label-ink">Gating</text>
+        <text x="540" y="126" class="svg-label">data held fixed, state input changes</text>
+        <text x="468" y="146" class="svg-label-oxide">hard selection: a between-state jump</text>
+        <text x="468" y="163" class="svg-label-steel">averaging: moves with the change in probability</text>
+
+        <line x1="452" y1="190" x2="880" y2="190" stroke="#D5DEE7"/>
+        <text x="452" y="214" class="svg-label-steel">median transition displacement −72–81%</text>
+        <text x="452" y="232" class="svg-label">pooling at the selected state: −4–37%</text>
+        <text x="452" y="258" class="svg-label-steel">20% covariance reviews: 5.6–6.4 » 2.3–3.7 a year</text>
+        <text x="452" y="276" class="svg-label">minimum-variance turnover −23–30%</text>
       </svg>
-      <figcaption>Replication in place of single-panel certification: the claim that survives all three is return per unit of drawdown.</figcaption>
+      <figcaption>Left: a two-state concept sketch, not data. Right: the paper's update decomposition and its headline repair figures, across six estimator classes and three panels.</figcaption>
+    </figure>
+
+    <figure class="viz">
+      <svg viewBox="0 0 900 214" role="img" aria-label="What the two papers add up to: keep full-window means, since conditioned means had higher forecast loss in 12 of 12 comparisons; average the covariance across states, since state separation ran 1.7 to 2.1 times its null; let the regime inform the exposure, as in Paper 1. Testing the three together is the program's next step, not yet a result.">
+        <text x="20" y="26" class="svg-title">What the two papers add up to</text>
+        <rect x="20" y="44" width="276" height="100" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.4"/>
+        <text x="38" y="70" class="svg-label-ink">Means</text>
+        <text x="38" y="90" class="svg-label-steel-sm">keep the full window</text>
+        <text x="38" y="114" class="svg-label-sm">conditioned means: higher</text>
+        <text x="38" y="131" class="svg-label-sm">forecast loss in 12 / 12</text>
+        <rect x="312" y="44" width="276" height="100" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.4"/>
+        <text x="330" y="70" class="svg-label-ink">Covariance</text>
+        <text x="330" y="90" class="svg-label-steel-sm">average across states, don't gate</text>
+        <text x="330" y="114" class="svg-label-sm">covariance separation 1.7–2.1× its null</text>
+        <text x="330" y="131" class="svg-label-sm">20% reviews: 5.6–6.4 » 2.3–3.7 / yr</text>
+        <rect x="604" y="44" width="276" height="100" rx="5" fill="#fff" stroke="#2C5F8A" stroke-width="1.4"/>
+        <text x="622" y="70" class="svg-label-ink">Exposure</text>
+        <text x="622" y="90" class="svg-label-steel-sm">let the regime inform the size</text>
+        <text x="622" y="114" class="svg-label-sm">Paper 1: sizing beats selection</text>
+        <text x="622" y="131" class="svg-label-sm">on Sharpe, Calmar, DD · 3 / 3</text>
+        <rect x="20" y="162" width="860" height="38" rx="5" fill="none" stroke="#5B6774" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <text x="38" y="186" class="svg-label">Next test: full-window means, averaged risk, and regime-informed exposure together — open, not yet a result.</text>
+      </svg>
+      <figcaption>The program's working answer, component by component, from the two papers' results. Forecast and stability rankings differed across estimators, so the combination still has to be tested as a whole.</figcaption>
     </figure>
 
     <div class="chips">
-      <span class="chip"><b>0.25 Calmar</b> · lineup lead, primary panel</span>
-      <span class="chip"><b>Calmar lead</b> in 3 / 3 universes</span>
-      <span class="chip"><b>Edge halves</b> under a 1-week lag</span>
+      <span class="chip"><b>3 / 3 panels</b> · sizing beats selection</span>
+      <span class="chip"><b>~7× / 15–27×</b> transition jumps</span>
       <span class="chip"><b>Theorem</b> extending Rising–Wyner (2012)</span>
-      <span class="chip hold">Frozen crisis holdout — reported as-is</span>
+      <span class="chip"><b>72–81%</b> less transition displacement</span>
+      <span class="chip"><b>5.6–6.4 » 2.3–3.7</b> reviews a year</span>
+      <span class="chip hold">EWMA forecasts better — reported as-is</span>
     </div>
     <div class="boundary claims">
       <section class="open">
-        <h4>What the paper claims</h4>
+        <h4>What the papers claim</h4>
         <p class="sub">Stated at the altitude the evidence supports.</p>
         <ul>
-          <li>Highest Calmar in the headline six-strategy lineup, in all three universes — with the margins reported alongside the ordering.</li>
-          <li>Beats the horizon-matched data-side comparator on Sharpe, drawdown, and Calmar in every universe.</li>
-          <li>A long-only shrinkage identity, exact under an explicitly stated condition and conservative outside it.</li>
-          <li>Survives every specification varied — cost levels, rate convention, classifier and dial specification.</li>
+          <li><span class="ptag">P1</span>Sizing beats selection on Sharpe, Calmar, and maximum drawdown in all three panels, under matched windows, constraints, and chronology, net of costs.</li>
+          <li><span class="ptag">P1</span>The Sharpe and Calmar advantages survive ex-post volatility matching, and hard selection alone trails plug-in Kelly in every panel.</li>
+          <li><span class="ptag">P1</span>Dialing is exactly mean shrinkage on interior windows, and takes no more risky exposure when the budget binds.</li>
+          <li><span class="ptag">P2</span>With data and components fixed, a hard selector jumps by a between-state distance; averaging the same components is Lipschitz in the state probabilities.</li>
+          <li><span class="ptag">P2</span>Averaging cuts transition displacement 72–81% across six estimator classes and lowers risk-forecast loss against the full window in 9 of 9 comparisons.</li>
         </ul>
       </section>
       <div class="rule" aria-hidden="true"></div>
       <section class="held">
-        <h4>What it does not</h4>
+        <h4>What they do not</h4>
         <p class="sub">Volunteered before it is asked for.</p>
         <ul>
-          <li>Sharpe dominance. Equal-weight 1/N leads the primary panel, and the paper says so.</li>
-          <li>Shallowest drawdown. Minimum-variance and more conservative benchmarks draw down less, as their objectives predict.</li>
-          <li>Leadership in the crisis holdout — the rule leads neither Sharpe nor Calmar there.</li>
-          <li>Statistical certification. A panel of this length cannot resolve differences of this size; replication and specification robustness stand in its place, and are weaker.</li>
+          <li><span class="ptag">P1</span>Per-panel significance. Drawdown-gap intervals exclude zero in two panels, Calmar-gap intervals in none, and single-panel Sharpe tests are underpowered.</li>
+          <li><span class="ptag">P1</span>Value from state timing itself. Against de-levered full-window controls, its incremental drawdown benefit is unresolved.</li>
+          <li><span class="ptag">P2</span>A better forecaster than classifier-free smoothing. Exponential weighting beats both averages in all nine comparisons.</li>
+          <li><span class="ptag">P2</span>Uniform significance. The plain average's forecast gains are significant in 7 of 9 nominally and 3 after Holm adjustment (the pooled average keeps all 9), and the pooled selector beats its own average significantly in 4 of 9 nominal tests.</li>
+          <li><span class="ptag">P2</span>Stability for free. Averaging trades rare large revisions for frequent small ones.</li>
         </ul>
       </section>
     </div>
-    <p class="boundary-cap">The boundaries are load-bearing. A mechanism that swept every benchmark in every regime would invite the overfitting concern; the bounded result is the credible one.</p>
+    <p class="boundary-cap">The boundaries are load-bearing. Paper 1 says where the signal should enter; Paper 2 explains why the other entry point breaks, and says plainly where its repair stops beating simpler tools.</p>
 
-    <p class="request">Full case study — measurement protocol, robustness program, drill-downs — <a href="#access">available on request</a>.</p>
+    <p class="request">Both preprints are public on SSRN. Full case study — measurement protocol, robustness program, drill-downs — <a href="#access">available on request</a>.</p>
   </div>
 </article>
 
@@ -507,7 +606,7 @@
     <div class="chapter"><span class="swatch deep"></span>The throughline, resolved</div>
     <h2>The same question, three generations of machinery.</h2>
     <figure class="viz">
-      <svg viewBox="0 0 900 250" role="img" aria-label="Flowchart: one question answered three ways — deterministic thresholds in 2020, locked probabilistic dials in 2023, a theorem in 2026.">
+      <svg viewBox="0 0 900 250" role="img" aria-label="Flowchart: one question answered three ways — deterministic thresholds in 2020, locked probabilistic dials in 2023, proofs and matched tests across two papers in 2026.">
         <text x="450" y="30" text-anchor="middle" class="svg-title">How much exposure, given the state of the world?</text>
         <path d="M450 40 v 22" stroke="#D5DEE7" stroke-width="1.4"/>
         <!-- stage 1 -->
@@ -529,31 +628,24 @@
         <!-- stage 3 -->
         <rect x="646" y="76" width="234" height="96" rx="6" fill="#1E4260"/>
         <text x="664" y="102" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.06em">2026 · THE SCHOLAR</text>
-        <text x="664" y="126" fill="#fff" style="font-family:var(--mono);font-size:12px;font-weight:600">A theorem</text>
-        <text x="664" y="146" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">fractional dialing proven</text>
-        <text x="664" y="162" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">= state-conditional shrinkage</text>
+        <text x="664" y="126" fill="#fff" style="font-family:var(--mono);font-size:12px;font-weight:600">Proofs + matched tests</text>
+        <text x="664" y="146" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">dial size, keep the window;</text>
+        <text x="664" y="162" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">average risk, don't gate it</text>
         <text x="20" y="206" class="svg-label">Each generation kept the prior one's epistemics — pre-commitment, cost realism,</text>
         <text x="20" y="222" class="svg-label">information-timing discipline — and upgraded only the machinery.</text>
-        <text x="20" y="246" class="svg-label-steel">Deterministic rules » locked dials » a proof. The question never changed.</text>
+        <text x="20" y="246" class="svg-label-steel">Deterministic rules » locked dials » proofs and matched tests. The question never changed.</text>
       </svg>
     </figure>
   </div>
 </section>
-
-<!-- Paper section intentionally absent while the manuscript is unposted.
-     STILL HELD BACK (restore on posting): the manuscript title; the data-side fallback rate;
-     the contemporaneous-vs-lagged Sharpe pair; the two-costs framing (sample cost vs timing cost,
-     and the conditioning ratio that governs which binds). ALSO on posting: reinstate a short
-     block with the title + preprint link, and extend the footer provenance sentence to
-     " ... on my resume, in Delta Strategy Co's public executive abstract, or in the posted paper." -->
 
 <!-- ============ FOOTER / ACCESS ============ -->
 <footer class="site" id="access">
   <div class="wrap">
     <div class="eyebrow">Access &amp; provenance</div>
     <p class="prov" style="margin-top:14px">Detailed case-study portfolios — full STAR narratives, measurement protocols, validation standards, and anticipated technical drill-downs for each role — are maintained privately and <b>shared with interviewers on request</b>.</p>
-    <p class="prov">Every performance figure on this page appears verbatim on my resume or in Delta Strategy Co's public executive abstract; nothing here is sourced to the unposted manuscript alone. Estimator construction, classifier and dial parameters, measurement protocols, and client- or program-level specifics are withheld by design; the restraint is part of the work.</p>
-    <p class="contact"><a href="mailto:sbhydari@gmail.com">sbhydari@gmail.com</a> · Manhattan, NY</p>
+    <p class="prov">Every performance figure on this page appears on my resume, in Delta Strategy Co's public executive abstract, or in the two papers posted on SSRN (7140658, 7538119). Estimator construction, classifier and dial parameters, measurement protocols, and client- or program-level specifics are withheld by design; the restraint is part of the work.</p>
+    <p class="contact"><a href="mailto:sbhydari@gmail.com">sbhydari@gmail.com</a> · <a href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=12422688">SSRN author page</a> · Manhattan, NY</p>
     <p class="fine">© 2026 Syed B. Hydari · Case summaries prepared for professional reference · Nothing herein is an offer, a performance representation, or investment advice.</p>
   </div>
 </footer>
