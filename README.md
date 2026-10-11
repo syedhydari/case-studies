@@ -1,0 +1,26 @@
+# Case Studies — Syed B. Hydari
+
+Source for the public case-study summaries at **https://syedhydari.github.io/case-studies/** — four STAR-format summaries of a single research throughline (regime-conditioned Bayesian–Kelly architecture) carried across a UCLA research fellowship, boutique risk advisory (Risk Haas), pre-AUM quantitative R&D (Delta Strategy Co), and a two-paper research program at Columbia on regime information and estimation risk ([SSRN 7140658](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7140658), [SSRN 7538119](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7538119)).
+
+## Disclosure posture
+
+This repository intentionally contains **no code, models, data, or methodology** — a single static page. Every figure on the page appears on my resume, in Delta Strategy Co's public executive abstract, or in the two papers posted on SSRN; parameters, signals, and measurement protocols are withheld by design. Detailed case-study portfolios (full STAR narratives, measurement protocols, validation standards, technical drill-downs) are privatized and shared with interviewers on request.
+
+## Rights
+
+© 2026 Syed B. Hydari. All rights reserved. No license is granted for reuse or redistribution of the text or visuals. Nothing herein is an offer, a performance representation, or investment advice.
+
+This is a personal site; issues and pull requests are not monitored.
+
+## Contact
+
+sbhydari@gmail.com — for the full case-study portfolios or research inquiries.
+
+## Intellectual Property Notice
+
+Copyright © 2026 Syed Bashir Hydari. All rights reserved.
+
+This repository is publicly accessible for inspection and portfolio
+evaluation only. No permission is granted to reproduce, modify, implement,
+distribute, commercialize, or create derivative works from its contents.
+See [LICENSE.md].
