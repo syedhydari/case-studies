@@ -14,7 +14,7 @@ This is a personal site; issues and pull requests are not monitored.
 
 ## Contact
 
-sbhydari@gmail.com — for the full case-study portfolios or research inquiries.
+Request through LinkedIn for the full case-study portfolios or research inquiries.
 
 ## Intellectual Property Notice
 
