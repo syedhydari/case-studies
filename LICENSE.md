@@ -26,5 +26,5 @@ otherwise.
 Third-party materials, libraries, datasets, quotations, and dependencies
 remain subject to their respective licenses and terms.
 
-For licensing inquiries or written permission, contact:
-sbhydari@gmail.com
+For licensing inquiries or written permission, contact the author through
+LinkedIn: https://www.linkedin.com/in/syed-bashir-hydari/

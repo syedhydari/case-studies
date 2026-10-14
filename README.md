@@ -14,7 +14,7 @@ This is a personal site; issues and pull requests are not monitored.
 
 ## Contact
 
-Request through LinkedIn for the full case-study portfolios or research inquiries.
+Request through [LinkedIn](https://www.linkedin.com/in/syed-bashir-hydari/) for the full case-study portfolios or research inquiries.
 
 ## Intellectual Property Notice
 
@@ -23,4 +23,4 @@ Copyright © 2026 Syed Bashir Hydari. All rights reserved.
 This repository is publicly accessible for inspection and portfolio
 evaluation only. No permission is granted to reproduce, modify, implement,
 distribute, commercialize, or create derivative works from its contents.
-See [LICENSE.md].
+See [LICENSE.md](LICENSE.md).
