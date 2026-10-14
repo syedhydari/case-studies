@@ -82,8 +82,8 @@
   figure.viz{margin:30px 0 6px;padding:22px 22px 16px;background:#fff;border:1px solid var(--line);border-radius:6px}
 
   /* ---------- papers (Columbia) ---------- */
-  .papers{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;margin:22px 0 4px}
-  @media (max-width:720px){.papers{grid-template-columns:1fr}}
+  .papers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 18px;margin:22px 0 4px}
+  @media (max-width:860px){.papers{grid-template-columns:1fr}}
   a.paper{display:block;background:#fff;border:1px solid var(--line);border-left:3px solid var(--steel);border-radius:4px;padding:14px 16px;color:var(--ink)}
   a.paper:hover{border-color:var(--steel)}
   .paper .pk{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel)}
@@ -210,7 +210,7 @@
       <span class="chapter"><span class="swatch" style="--o:.72"></span>The scholar · 2025 – present</span>
       <span class="role-line">Researcher, Quant Finance · Columbia University — Statistics &amp; MAFN · research program on regime information and estimation risk</span>
     </div>
-    <h2>Should a regime signal choose the estimation data, or size the bet? A two-paper answer.</h2>
+    <h2>Should a regime signal choose the estimation data, or size the bet? Is the state worth knowing at all?</h2>
 
     <div class="papers" role="list" aria-label="Working papers">
       <a class="paper" role="listitem" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7140658">
@@ -223,6 +223,11 @@
         <span class="pt">Sample gating: estimator discontinuity under latent-state conditioning</span>
         <span class="pm">SSRN 7538119 · under review, <i>The Journal of Risk</i></span>
       </a>
+      <a class="paper" role="listitem" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7604562">
+        <span class="pk">Paper 3 · sole author</span>
+        <span class="pt">When is a state worth knowing? The growth value of conditioning information under estimation risk</span>
+        <span class="pm">SSRN 7604562 · preprint</span>
+      </a>
     </div>
 
     <div class="star">
@@ -232,7 +237,7 @@
       </div>
       <div>
         <h3>Task</h3>
-        <p>Answer both questions at publication grade: matched comparisons, a lagged signal, every portfolio figure net of transaction costs, and claims parked at exactly the altitude the evidence supports. I originated and led the program — first author of Paper 1, sole author of Paper 2 — leading theory, design, data, code, and writing, with version audit histories and decision logs kept throughout.</p>
+        <p>Answer both questions at publication grade: matched comparisons, a lagged signal, every portfolio figure net of transaction costs, and claims parked at exactly the altitude the evidence supports. I originated and led the program — first author of Paper 1, sole author of Papers 2 and 3 — leading theory, design, data, code, and writing, with version audit histories and decision logs kept throughout.</p>
       </div>
       <div>
         <h3>Action</h3>
@@ -241,8 +246,8 @@
       </div>
       <div>
         <h3>Result</h3>
-        <p><b>Placement:</b> sizing beat selection on Sharpe, Calmar, and maximum drawdown in all three panels, and the Sharpe and Calmar advantages survived ex-post volatility matching. <b>Mechanism:</b> at hard-selector transitions, median mean and covariance displacements ran ~7× and 15–27× same-date full-window changes, with moving-block bootstrap intervals above one. <b>Repair:</b> posterior averaging cut median transition displacement 72–81% across six estimator classes (pooling at the selected state: 4–37%), cut minimum-variance turnover 23–30%, and brought 20% covariance reviews from 5.6–6.4 to 2.3–3.7 a year; risk-forecast loss fell against the full window in 9 of 9 comparisons.</p>
-        <p>Stated with the papers' own restraint: drawdown-gap intervals exclude zero in two panels and Calmar-gap intervals in none, and single-panel Sharpe tests are underpowered. Against de-levered full-window controls, the incremental drawdown benefit of state timing is unresolved. Classifier-free exponential weighting forecasts risk better than either average. Reported as-is.</p>
+        <p><b>Placement:</b> sizing beat selection on Sharpe, Calmar, and maximum drawdown in all three panels, and the Sharpe and Calmar advantages survived ex-post volatility matching. <b>Mechanism:</b> at hard-selector transitions, median mean and covariance displacements ran ~7× and 15–27× same-date full-window changes, with moving-block bootstrap intervals above one. <b>Repair:</b> posterior averaging cut median transition displacement 72–81% across six estimator classes (pooling at the selected state: 4–37%), cut minimum-variance turnover 23–30%, and brought 20% covariance reviews from 5.6–6.4 to 2.3–3.7 a year; risk-forecast loss fell against the full window in 9 of 9 comparisons. <b>Value:</b> Paper 3 asks whether the label is worth learning at all. Estimating a Kelly fraction per regime costs about (J−1)/(2n) of growth per period, whatever the state's frequency; from 1971 to 2026, full-Kelly hard conditioning lowered growth net of switching costs for every label set, and quarter Kelly came close to pooling.</p>
+        <p>Stated with the papers' own restraint: drawdown-gap intervals exclude zero in two panels and Calmar-gap intervals in none, and single-panel Sharpe tests are underpowered. Against de-levered full-window controls, the incremental drawdown benefit of state timing is unresolved. Classifier-free exponential weighting forecasts risk better than either average. Paper 3's evidence that the labels carry information at all is weak. Reported as-is.</p>
       </div>
     </div>
 
@@ -379,7 +384,7 @@
     </div>
     <p class="boundary-cap">The boundaries are load-bearing. Paper 1 says where the signal should enter; Paper 2 explains why the other entry point breaks, and says plainly where its repair stops beating simpler tools.</p>
 
-    <p class="request">Both preprints are public on SSRN. Full case study — measurement protocol, robustness program, drill-downs — <a href="#access">available on request</a>.</p>
+    <p class="request">All three preprints are public on SSRN. Full case study — measurement protocol, robustness program, drill-downs — <a href="#access">available on request</a>.</p>
   </div>
 </article>
 
@@ -605,34 +610,35 @@
     <div class="chapter"><span class="swatch deep"></span>The throughline, resolved</div>
     <h2>The same question, three generations of machinery.</h2>
     <figure class="viz">
-      <svg viewBox="0 0 900 250" role="img" aria-label="Flowchart: one question answered three ways — deterministic thresholds in 2020, locked probabilistic dials in 2023, proofs and matched tests across two papers in 2026.">
+      <svg viewBox="0 0 900 258" role="img" aria-label="Flowchart: one question answered three ways — deterministic thresholds in 2020, locked probabilistic dials in 2023, proofs and matched tests across three papers in 2026.">
         <text x="450" y="30" text-anchor="middle" class="svg-title">How much exposure, given the state of the world?</text>
         <path d="M450 40 v 22" stroke="#D5DEE7" stroke-width="1.4"/>
         <!-- stage 1 -->
-        <rect x="20" y="76" width="262" height="96" rx="6" fill="#E9EFF5" stroke="#2C5F8A" stroke-width="1.2"/>
+        <rect x="20" y="76" width="262" height="118" rx="6" fill="#E9EFF5" stroke="#2C5F8A" stroke-width="1.2"/>
         <text x="38" y="102" class="svg-label-steel">2020 · THE OPERATOR</text>
         <text x="38" y="126" class="svg-label-ink">Deterministic thresholds</text>
         <text x="38" y="146" class="svg-label">pre-agreed drawdown bands,</text>
         <text x="38" y="162" class="svg-label">VaR limits, escalation protocols</text>
-        <path d="M282 124 H 328" stroke="#2C5F8A" stroke-width="2"/>
-        <path d="M328 124 l -11 -6 v12 z" fill="#2C5F8A"/>
+        <path d="M282 135 H 328" stroke="#2C5F8A" stroke-width="2"/>
+        <path d="M328 135 l -11 -6 v12 z" fill="#2C5F8A"/>
         <!-- stage 2 -->
-        <rect x="333" y="76" width="262" height="96" rx="6" fill="#DCE7F0" stroke="#2C5F8A" stroke-width="1.2"/>
+        <rect x="333" y="76" width="262" height="118" rx="6" fill="#DCE7F0" stroke="#2C5F8A" stroke-width="1.2"/>
         <text x="351" y="102" class="svg-label-steel">2023 · THE BUILDER</text>
         <text x="351" y="126" class="svg-label-ink">Locked probabilistic dials</text>
         <text x="351" y="146" class="svg-label">regime classifier » fractional</text>
         <text x="351" y="162" class="svg-label">sizing, frozen pre-evaluation</text>
-        <path d="M595 124 H 641" stroke="#2C5F8A" stroke-width="2"/>
-        <path d="M641 124 l -11 -6 v12 z" fill="#2C5F8A"/>
+        <path d="M595 135 H 641" stroke="#2C5F8A" stroke-width="2"/>
+        <path d="M641 135 l -11 -6 v12 z" fill="#2C5F8A"/>
         <!-- stage 3 -->
-        <rect x="646" y="76" width="234" height="96" rx="6" fill="#1E4260"/>
+        <rect x="646" y="76" width="234" height="118" rx="6" fill="#1E4260"/>
         <text x="664" y="102" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.06em">2026 · THE SCHOLAR</text>
         <text x="664" y="126" fill="#fff" style="font-family:var(--mono);font-size:12px;font-weight:600">Proofs + matched tests</text>
         <text x="664" y="146" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">dial size, keep the window;</text>
-        <text x="664" y="162" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">average risk, don't gate it</text>
-        <text x="20" y="206" class="svg-label">Each generation kept the prior one's epistemics — pre-commitment, cost realism,</text>
-        <text x="20" y="222" class="svg-label">information-timing discipline — and upgraded only the machinery.</text>
-        <text x="20" y="246" class="svg-label-steel">Deterministic rules » locked dials » proofs and matched tests. The question never changed.</text>
+        <text x="664" y="162" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">average risk, don't gate it;</text>
+        <text x="664" y="178" fill="#BFD3E4" style="font-family:var(--mono);font-size:11.5px">condition only when it pays</text>
+        <text x="20" y="214" class="svg-label">Each generation kept the prior one's epistemics — pre-commitment, cost realism,</text>
+        <text x="20" y="230" class="svg-label">information-timing discipline — and upgraded only the machinery.</text>
+        <text x="20" y="254" class="svg-label-steel">Deterministic rules » locked dials » proofs and matched tests. The question never changed.</text>
       </svg>
     </figure>
   </div>
@@ -643,7 +649,7 @@
   <div class="wrap">
     <div class="eyebrow">Access &amp; provenance</div>
     <p class="prov" style="margin-top:14px">Detailed case-study portfolios — full STAR narratives, measurement protocols, validation standards, and anticipated technical drill-downs for each role — are maintained privately and <b>shared with interviewers on request</b>.</p>
-    <p class="prov">Every performance figure on this page appears on my resume, in Delta Strategy Co's public executive abstract, or in the two papers posted on SSRN (7140658, 7538119). Estimator construction, classifier and dial parameters, measurement protocols, and client- or program-level specifics are withheld by design; the restraint is part of the work.</p>
+    <p class="prov">Every performance figure on this page appears on my resume, in Delta Strategy Co's public executive abstract, or in the three papers posted on SSRN (7140658, 7538119, 7604562). Estimator construction, classifier and dial parameters, measurement protocols, and client- or program-level specifics are withheld by design; the restraint is part of the work.</p>
     <p class="contact"><a href="mailto:sbhydari@gmail.com">sbhydari@gmail.com</a> · <a href="https://papers.ssrn.com/Sol3/Cf_Dev/AbsByAuth.cfm?per_id=12422688">SSRN author page</a> · Manhattan, NY</p>
     <p class="fine">© 2026 Syed B. Hydari · Case summaries prepared for professional reference · Nothing herein is an offer, a performance representation, or investment advice.</p>
   </div>
