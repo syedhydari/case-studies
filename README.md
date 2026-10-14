@@ -1,10 +1,10 @@
 # Case Studies — Syed B. Hydari
 
-Source for the public case-study summaries at **https://syedhydari.github.io/case-studies/** — four STAR-format summaries of a single research throughline (regime-conditioned Bayesian–Kelly architecture) carried across a UCLA research fellowship, boutique risk advisory (Risk Haas), pre-AUM quantitative R&D (Delta Strategy Co), and a research program at Columbia on regime information and estimation risk.
+Source for the public case-study summaries at **https://syedhydari.github.io/case-studies/** — four summaries of a single research throughline (regime-conditioned Bayesian–Kelly architecture) carried across a UCLA research fellowship, boutique risk advisory (Risk Haas), pre-AUM quantitative R&D (Delta Strategy Co), and a research program at Columbia on regime information and estimation risk.
 
 ## Disclosure posture
 
-This repository intentionally contains **no code, models, data, or methodology** — a single static page. Every figure on the page appears on my resume, in Delta Strategy Co's public executive abstract, or in the three papers posted on SSRN; parameters, signals, and measurement protocols are withheld by design. Detailed case-study portfolios (full STAR narratives, measurement protocols, validation standards, technical drill-downs) are privatized and shared with interviewers on request.
+This repository intentionally contains **no code, models, data, or methodology** — a single static page. Every figure on the page appears on my resume, in Delta Strategy Co's public executive abstract, or in the three papers posted on SSRN; parameters, signals, and measurement protocols are withheld by design. Detailed case-study portfolios (full narratives, measurement protocols, validation standards, technical drill-downs) are privatized and shared with interviewers on request.
 
 ## Rights
 
